@@ -1,6 +1,6 @@
 const akan_names = {
-  Male: ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"],
-  Female: ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"],
+  male: ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"],
+  female: ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"],
 };
 
 function validateForm() {
@@ -24,10 +24,6 @@ function validateForm() {
     return false;
   }
 
-  let CC = Number(year.toString().substring(0, 2));
-  let YY = Number(year.toString().substring(2));
-  let day_of_week =
-    (CC / 4 - 2 * CC - 1 + (5 * YY) / 4 + (26 * (month + 1)) / 10 + day) % 7;
-
-  alert("Day of the week " + Math.floor(day_of_week));
+  let day_of_week = birthdate.getDay();
+  alert("Awesome, your Akan name is: " + akan_names[gender][day_of_week]);
 }
