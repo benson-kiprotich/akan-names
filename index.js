@@ -26,6 +26,8 @@ function validateForm() {
 
   let CC = Number(year.toString().substring(0, 2));
   let YY = Number(year.toString().substring(2));
+  let day_of_week =
+    (CC / 4 - 2 * CC - 1 + (5 * YY) / 4 + (26 * (month + 1)) / 10 + day) % 7;
 
-  alert("year " + YY);
+  alert("Day of the week " + Math.floor(day_of_week));
 }
