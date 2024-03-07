@@ -1,9 +1,12 @@
 function validateForm() {
-  var birthdateInput = document.getElementById("birthdate");
-  var birthdate = new Date(birthdateInput.value);
+  let birthdateInput = document.getElementById("birthdate");
+  let genderInput = document.getElementById("gender");
 
-  var day = birthdate.getDate();
-  var month = birthdate.getMonth() + 1; // Month is zero-based
+  let birthdate = new Date(birthdateInput.value);
+  let gender = genderInput.value;
+
+  let day = birthdate.getDate();
+  let month = birthdate.getMonth() + 1; // Month is zero-based
 
   if (isNaN(birthdate.getTime())) {
     alert("Please enter a valid date.");
