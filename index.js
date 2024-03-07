@@ -1,3 +1,8 @@
+const akan_names = {
+  Male: ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"],
+  Female: ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"],
+};
+
 function validateForm() {
   let birthdateInput = document.getElementById("birthdate");
   let genderInput = document.getElementById("gender");
