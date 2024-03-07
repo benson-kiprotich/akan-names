@@ -12,6 +12,7 @@ function validateForm() {
 
   let day = birthdate.getDate();
   let month = birthdate.getMonth() + 1; // Month is zero-based
+  let year = birthdate.getFullYear();
 
   if (isNaN(birthdate.getTime())) {
     alert("Please enter a valid date.");
@@ -23,5 +24,8 @@ function validateForm() {
     return false;
   }
 
-  return true;
+  let CC = Number(year.toString().substring(0, 2));
+  let YY = Number(year.toString().substring(2));
+
+  alert("year " + YY);
 }
